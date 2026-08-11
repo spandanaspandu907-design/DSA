@@ -12,4 +12,6 @@ class Solution:
             left += nums[i]
 
         return -1
-        
+s = Solution()
+print(s.pivotIndex([1, 7, 3, 6, 5, 6]))
+print("Testing")
