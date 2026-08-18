@@ -1,13 +1,13 @@
 class Solution:
-    def removeDuplicates(self, nums):
-        if len(nums) == 0:
-            return 0
+    def removeDuplicates(self, s: str) -> str:
+        stack = []
 
-        i = 0
+        for ch in s:
+            if stack and stack[-1] == ch:
 
-        for j in range(1, len(nums)):
-            if nums[j] != nums[i]:
-                i += 1
-                nums[i] = nums[j]
+                stack.pop()
+            else:
+                stack.append(ch)
 
-        return i + 1
+        return ''.join(stack)
+        
